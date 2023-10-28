@@ -19,9 +19,11 @@ def main():
         elif choice == '3':
            invert_dictionary()
         elif choice == '4':
-            lsit_to_dictionary({1,2,3})
+            m=[[5,2,3],[1,5,4]]
+            result=matrix_to_dictionary(m)
+            print(result)
         elif choice == '5':
-           print( is_palindrome("r"))
+           print( is_palindrome("a"))
         elif choice == '6':
            search_element()
         elif choice == '7':
@@ -32,14 +34,14 @@ def main():
 
 def add_matrices():
      rows = int(input("Enter number of rows: "))
-     cols=int(input("Enter number of cols: "))
+     cols=int(input("Enter number of columns: "))
      m1=[]
      m2=[]
      print("Enter elements for the first matrix:")
      for i in range(rows):
          row=[]
          for j in range(cols):
-             nbs=int(input("enter number :"))
+             nbs=int(input("enter number at row :"))
              row.append(nbs)
          m1.append(row)
      print(f"Enter elements for the second matrix:")
@@ -73,18 +75,15 @@ def invert_dictionary():
             inverted[value]=key
     print(original)
     print(inverted)
-def lsit_to_dictionary(info):
-    dict={}
-    for i in info:
-        user_id=i[2]
-        user=i[:2]+i[3:]
-        dict[user_id]=user
-    return dict
-info = [["firstname1", "lastname1", "ID1", "jobtitle1", "company1"],
-             ["firstname2", "lastname2", "ID2", "jobtitle2", "company2"],
-             ["firstname3", "lastname3", "ID3", "jobtitle3", "company3"]]
-dict=lsit_to_dictionary(info)
-print(dict)
+
+def matrix_to_dictionary(matrix):
+    dictionary = {}
+    for i in range(len(matrix)):
+        result="ID"
+        dictionary[i + 1] = matrix[i]
+    return dictionary
+
+
 def is_palindrome(s):
     return s == s[::-1]
 def search_element():
