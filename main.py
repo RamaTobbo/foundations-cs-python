@@ -19,7 +19,7 @@ def main():
         elif choice == '3':
            invert_dictionary()
         elif choice == '4':
-            return 0
+            lsit_to_dictionary({1,2,3})
         elif choice == '5':
             return 0
         elif choice == '6':
@@ -73,4 +73,16 @@ def invert_dictionary():
             inverted[value]=key
     print(original)
     print(inverted)
+def lsit_to_dictionary(info):
+    dict={}
+    for i in info:
+        user_id=i[2]
+        user=i[:2]+i[3:]
+        dict[user_id]=user
+    return dict
+info = [["firstname1", "lastname1", "ID1", "jobtitle1", "company1"],
+             ["firstname2", "lastname2", "ID2", "jobtitle2", "company2"],
+             ["firstname3", "lastname3", "ID3", "jobtitle3", "company3"]]
+dict=lsit_to_dictionary(info)
+print(dict)
 main()
