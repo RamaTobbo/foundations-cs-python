@@ -90,6 +90,16 @@ def is_palindrome(s):
 def search_element():
     list=[]
     element=input("Enter the element you want:")
-    if element in list:
-        print(f"element {element}")
+    found=False
+    index=-1
+    for i in (len(list)):
+        if list[i]==element:
+            found=True
+            index=i
+            break
+    if found:
+        print(f"Element {element} found at index {index}")
+    else:
+        print("element not found")
+
 main()
