@@ -21,7 +21,7 @@ def main():
         elif choice == '4':
             lsit_to_dictionary({1,2,3})
         elif choice == '5':
-            is_palindrome("hello")
+           print( is_palindrome("r"))
         elif choice == '6':
             return 0
         elif choice == '7':
