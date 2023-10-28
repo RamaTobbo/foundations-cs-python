@@ -87,4 +87,9 @@ dict=lsit_to_dictionary(info)
 print(dict)
 def is_palindrome(s):
     return s == s[::-1]
+def search_element():
+    list=[]
+    element=input("Enter the element you want:")
+    if element in list:
+        print(f"element {element}")
 main()
