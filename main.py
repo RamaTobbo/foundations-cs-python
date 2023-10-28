@@ -23,7 +23,7 @@ def main():
         elif choice == '5':
            print( is_palindrome("r"))
         elif choice == '6':
-            return 0
+           search_element()
         elif choice == '7':
             exit(0)
         else:
@@ -88,7 +88,7 @@ print(dict)
 def is_palindrome(s):
     return s == s[::-1]
 def search_element():
-    list=[]
+    list=[1,2]
     element=input("Enter the element you want:")
     found=False
     index=-1
