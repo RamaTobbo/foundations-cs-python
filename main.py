@@ -86,10 +86,5 @@ info = [["firstname1", "lastname1", "ID1", "jobtitle1", "company1"],
 dict=lsit_to_dictionary(info)
 print(dict)
 def is_palindrome(s):
-    if len(s)<=1:
-        return True
-    if s[0]==s[-1]:
-        return is_palindrome(s[1:-1])
-    else:
-        return False
+    return s == s[::-1]
 main()
