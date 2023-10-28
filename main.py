@@ -25,7 +25,7 @@ def main():
         elif choice == '5':
            print( is_palindrome("a"))
         elif choice == '6':
-           search_element()
+          search_element([5,2,3],5)
         elif choice == '7':
             exit(0)
         else:
@@ -86,19 +86,29 @@ def matrix_to_dictionary(matrix):
 
 def is_palindrome(s):
     return s == s[::-1]
-def search_element():
-    list=[1,2]
-    element=input("Enter the element you want:")
+def search_element(list,element):
     found=False
-    index=-1
-    for i in (len(list)):
+    for i in range(len(list)):
         if list[i]==element:
             found=True
             index=i
-            break
     if found:
-        print(f"Element {element} found at index {index}")
+        print(f"element is found at index {index}")
     else:
-        print("element not found")
+        print(f"element not found ")
+
+
+    for i in range(len(list)-1):
+        for j in range(len(list)-i-1):
+                if list[j]>list[j+1]:
+                    temp=list[j]
+                    list[j]=list[j+1]
+                    list[j+1]=temp
+    print(list)
+
+
+
+
+
 
 main()
