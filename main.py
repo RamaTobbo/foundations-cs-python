@@ -112,4 +112,3 @@ def search_element(list,element):
 
 
 main()
-main()
