@@ -114,3 +114,12 @@ def saveTabs():
              json.dump(tabs,file)
     print("Tabs are saved successfully")
 
+#import tabs that take file path as parameter
+#json.load it take a file and return an object or data
+def importTabs(file_path):
+
+
+    with open(file_path, 'r') as file:
+             tabs = json.load(file)
+    print("Tabs loaded successfully.")
+
