@@ -96,5 +96,8 @@ def createNestedTabs():
     return nested_tabs
 
 #remove all elements from the list using clear() method
+#bigO(1)
 def clearAllTabs():
      tabs.clear()
+
+
