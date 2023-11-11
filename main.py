@@ -25,3 +25,11 @@ def closeTab():
             closed_tab = tabs.pop()
             print(f"last  Tab {closed_tab['title']} is closed")
 
+# if there is no tabs so there is no content to display ,if the user enter no index so the content of the last tab will be displayed
+#else if the user enter an index we will dispaly the content of the tab at that index
+#if the user enter an index but invalid we will also consider it as index not provided and display the content of the last tab
+#displaying the content as html form so we should create a function to display the html content
+def switchTab():
+    if len(tabs)==0:
+        print("No tabs to display its content ")
+        return
