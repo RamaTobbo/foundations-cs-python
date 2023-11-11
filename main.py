@@ -1,3 +1,4 @@
+import requests
 
 tabs = []
 #big0(1)
@@ -33,3 +34,9 @@ def switchTab():
     if len(tabs)==0:
         print("No tabs to display its content ")
         return
+
+# get the url than display its html content
+def displayTabContent(tab):
+    url=tab['url']
+    response=requests.get(url)
+    print(response.content)
