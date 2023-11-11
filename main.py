@@ -1,5 +1,6 @@
 
 tabs = []
+#big0(1)
 def openTab():
     title = input("Enter the Title: ")
     url = input("Enter the URL: ")
