@@ -132,7 +132,17 @@ def displayAllTabs():
 
             print( f" Tab {opened_tab['title']}")
 
-
+def displayMenu():
+    print("\nMenu:")
+    print("1. Open Tab")
+    print("2. Close Tab")
+    print("3. Switch Tab")
+    print("4. Display All Tabs")
+    print("5. Open Nested Tab")
+    print("6. Clear All Tabs")
+    print("7. Save Tabs")
+    print("8. Import Tabs")
+    print("9. Exit")
 
 
 
@@ -142,16 +152,7 @@ def main():
     user=input("Enter your name :")
     print(f"welcome {user}")
     while True:
-        print("\nMenu:")
-        print("1. Open Tab")
-        print("2. Close Tab")
-        print("3. Switch Tab")
-        print("4. Display All Tabs")
-        print("5. Open Nested Tab")
-        print("6. Clear All Tabs")
-        print("7. Save Tabs")
-        print("8. Import Tabs")
-        print("9. Exit")
+      
 
         choice = input("Enter your choice (1-9): ").strip()
 
