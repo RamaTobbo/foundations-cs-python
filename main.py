@@ -124,6 +124,13 @@ def importTabs(file_path):
              tabs = json.load(file)
     print("Tabs loaded successfully.")
 
+def displayAllTabs():
+    if len(tabs)==0:
+        print("No open tabs ")
+    else:
+        for opened_tab in tabs:
+
+            print(f" Tab {opened_tab['title']}")
 
 #bigO(N)
 def main():
