@@ -34,6 +34,25 @@ def switchTab():
     if len(tabs)==0:
         print("No tabs to display its content ")
         return
+    index = input("Enter the index of the tab to display its content: ")
+    if len(index)==0 :
+        last_tab = tabs[-1]
+        print(f"last  Tab {last_tab['title']} ")
+        displayTabContent(last_tab)
+
+
+
+    else:
+        i = int(index)
+        if i<len(tabs):
+
+         switched_tab = tabs[i]
+         print(f"Tab {switched_tab['title']} ")
+         displayTabContent(switched_tab)
+        else:
+            last_tab = tabs[-1]
+            print(f"last  Tab {last_tab['title']} ")
+            displayTabContent(last_tab)
 
 # get the url than display its html content
 def displayTabContent(tab):
