@@ -25,8 +25,7 @@ def closeTab():
             closed_tab = tabs.pop(i)
             print(f"Tab {closed_tab['title']} is closed")
         else:
-            closed_tab = tabs.pop()
-            print(f"last  Tab {closed_tab['title']} is closed")
+           print("invalid index")
 
 # if there is no tabs so there is no content to display ,if the user enter no index so the content of the last tab will be displayed
 #else if the user enter an index we will dispaly the content of the tab at that index
