@@ -56,6 +56,7 @@ def switchTab():
             print("invalid index")
 
 # get the url than display its html content
+#bigO(1)
 def displayTabContent(tab):
     url=tab['url']
     response=requests.get(url)
