@@ -30,7 +30,7 @@ def closeTab():
 
 # if there is no tabs so there is no content to display ,if the user enter no index so the content of the last tab will be displayed
 #else if the user enter an index we will dispaly the content of the tab at that index
-#if the user enter an index but invalid we will also consider it as index not provided and display the content of the last tab
+#if the user enter an index but invalid we will print invalid index
 #displaying the content as html form so we should create a function to display the html content
 #big0(1)
 def switchTab():
@@ -53,9 +53,7 @@ def switchTab():
          print(f"Tab {switched_tab['title']} ")
          displayTabContent(switched_tab)
         else:
-            last_tab = tabs[-1]
-            print(f"last  Tab {last_tab['title']} ")
-            displayTabContent(last_tab)
+            print("invalid index")
 
 # get the url than display its html content
 def displayTabContent(tab):
@@ -132,6 +130,9 @@ def displayAllTabs():
 
             print(f" Tab {opened_tab['title']}")
 
+
+
+
 #bigO(N)
 def main():
     user=input("Enter your name :")
@@ -176,3 +177,4 @@ def main():
         else:
             print("Invalid choice. ")
 
+main()
