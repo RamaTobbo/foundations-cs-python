@@ -30,6 +30,7 @@ def closeTab():
 #else if the user enter an index we will dispaly the content of the tab at that index
 #if the user enter an index but invalid we will also consider it as index not provided and display the content of the last tab
 #displaying the content as html form so we should create a function to display the html content
+#big0(1)
 def switchTab():
     if len(tabs)==0:
         print("No tabs to display its content ")
