@@ -68,3 +68,16 @@ def openNestedTab():
         print("No tabs to create nested tabs.")
         return
 
+
+    
+# nested tab the user should enter the title and the content
+def createNestedTabs():
+    nested_tabs = []
+    while True:
+        title = input("Enter the Title for the nested tab : ")
+        if len(title)==0:
+
+            break
+        content = input("Enter the content for the nested tab: ")
+        nested_tabs.append({"title": title, "content": content})
+    return nested_tabs
