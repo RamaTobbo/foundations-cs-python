@@ -124,12 +124,15 @@ def importTabs(file_path):
     print("Tabs loaded successfully.")
 #bigO(N)
 def displayAllTabs():
+    nested_tabs=[]
     if len(tabs)==0:
         print("No open tabs ")
     else:
         for opened_tab in tabs:
 
-            print(f" Tab {opened_tab['title']}")
+            print( f" Tab {opened_tab['title']}")
+
+
 
 
 
@@ -170,6 +173,7 @@ def main():
         elif choice == '8':
             file_path = input("Enter the file path to import tabs: ").strip()
             loaded = importTabs(file_path)
+            displayAllTabs()
 
 
         elif choice == '9':
