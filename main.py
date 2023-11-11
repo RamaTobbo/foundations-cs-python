@@ -73,7 +73,7 @@ def openNestedTab():
 
     parent = int(input("Enter the index of the parent tab to insert nested tabs: ").strip())
 
-    if parent <= len(tabs):
+    if parent < len(tabs):
         tabs[parent]['nested_tabs'].append(createNestedTabs())
 
     else:
@@ -130,6 +130,8 @@ def displayAllTabs():
         for opened_tab in tabs:
 
             print( f" Tab {opened_tab['title']}")
+            if 'nested_tabs' in opened_tab:
+             print(tabs[0]["nested_tabs"])
 
 def displayMenu():
     print("\nMenu:")
