@@ -123,7 +123,7 @@ def importTabs(file_path):
     with open(file_path, 'r') as file:
              tabs = json.load(file)
     print("Tabs loaded successfully.")
-
+#bigO(N)
 def displayAllTabs():
     if len(tabs)==0:
         print("No open tabs ")
