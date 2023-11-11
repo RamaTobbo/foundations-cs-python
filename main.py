@@ -125,6 +125,7 @@ def importTabs(file_path):
     print("Tabs loaded successfully.")
 
 
+#bigO(N)
 def main():
     user=input("Enter your name :")
     print(f"welcome {user}")
