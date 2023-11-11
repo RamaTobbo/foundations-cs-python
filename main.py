@@ -116,6 +116,7 @@ def saveTabs():
 
 #import tabs that take file path as parameter
 #json.load it take a file and return an object or data
+#bigO(N)
 def importTabs(file_path):
 
 
