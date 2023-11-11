@@ -94,3 +94,7 @@ def createNestedTabs():
         content = input("Enter the content for the nested tab: ")
         nested_tabs.append({"title": title, "content": content})
     return nested_tabs
+
+#remove all elements from the list using clear() method
+def clearAllTabs():
+     tabs.clear()
