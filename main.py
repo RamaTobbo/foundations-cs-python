@@ -157,7 +157,7 @@ def main():
         elif choice == '3':
             switchTab()
         elif choice == '4':
-            pass
+            displayAllTabs()
         elif choice == '5':
             openNestedTab()
             print(tabs)
