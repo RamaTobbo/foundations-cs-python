@@ -119,7 +119,8 @@ def importTabs(file_path):
 
 
     with open(file_path, 'r') as file:
-             tabs = json.load(file)
+             y = json.load(file)
+    return y
 
 #bigO(N)
 def displayAllTabs():
