@@ -120,7 +120,7 @@ def importTabs(file_path):
 
     with open(file_path, 'r') as file:
              tabs = json.load(file)
-    print("Tabs loaded successfully.")
+
 #bigO(N)
 def displayAllTabs():
     nested_tabs=[]
@@ -129,7 +129,7 @@ def displayAllTabs():
     else:
         for opened_tab in tabs:
 
-            print( f" Tab title {opened_tab['title']}")
+            print( f" Tab title: {opened_tab['title']}")
             if 'nested_tabs' in opened_tab:
 
                 for nested in opened_tab['nested_tabs']:
@@ -157,8 +157,9 @@ def displayMenu():
 def main():
     user=input("Enter your name :")
     print(f"welcome {user}")
-
+    displayMenu()
     choice = input("Enter your choice (1-9): ").strip()
+
     while choice !='9':
 
 
@@ -181,7 +182,7 @@ def main():
         elif choice == '8':
             file_path = input("Enter the file path to import tabs: ").strip()
             loaded = importTabs(file_path)
-            displayAllTabs()
+            print("loaded")
 
 
         elif choice != '9':
