@@ -60,3 +60,11 @@ def displayTabContent(tab):
     url=tab['url']
     response=requests.get(url)
     print(response.content)
+
+# we should create nested tab first
+# if there is no tabs so we can not open nested tab
+def openNestedTab():
+    if len(tabs)==0:
+        print("No tabs to create nested tabs.")
+        return
+
