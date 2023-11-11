@@ -129,9 +129,14 @@ def displayAllTabs():
     else:
         for opened_tab in tabs:
 
-            print( f" Tab {opened_tab['title']}")
+            print( f" Tab title {opened_tab['title']}")
             if 'nested_tabs' in opened_tab:
-             print(tabs[0]["nested_tabs"])
+
+                for nested in opened_tab['nested_tabs']:
+                    for nested_tab in nested:
+
+                       print(f" Tab title: {nested_tab['title']}")
+
 
 def displayMenu():
     print("\nMenu:")
