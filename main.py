@@ -83,7 +83,7 @@ def openNestedTab():
 
 
 # nested tab the user should enter the title and the content
-
+#bigO(n)
 def createNestedTabs():
     nested_tabs = []
     while True:
