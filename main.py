@@ -63,13 +63,24 @@ def displayTabContent(tab):
 
 # we should create nested tab first
 # if there is no tabs so we can not open nested tab
+# if there is tabs the user should specify at which tab he want to open a nested tab
+#if the user enter invalid index nothing will be added
 def openNestedTab():
     if len(tabs)==0:
         print("No tabs to create nested tabs.")
         return
 
+    parent = int(input("Enter the index of the parent tab to insert nested tabs: ").strip())
 
-    
+    if parent <= len(tabs):
+        tabs[parent]['nested_tabs'].append(createNestedTabs())
+
+    else:
+        print("Invalid parent tab index.")
+
+
+
+
 # nested tab the user should enter the title and the content
 def createNestedTabs():
     nested_tabs = []
