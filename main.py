@@ -151,10 +151,11 @@ def displayMenu():
 def main():
     user=input("Enter your name :")
     print(f"welcome {user}")
-    while True:
-      
 
-        choice = input("Enter your choice (1-9): ").strip()
+    choice = input("Enter your choice (1-9): ").strip()
+    while choice !='9':
+
+
 
         if choice == '1':
             openTab()
@@ -177,10 +178,11 @@ def main():
             displayAllTabs()
 
 
-        elif choice == '9':
-            print("Exiting the program. ")
-            break
-        else:
+        elif choice != '9':
             print("Invalid choice. ")
+        displayMenu()
+        choice = input("Enter your choice (1-9): ").strip()
+
+
 
 main()
