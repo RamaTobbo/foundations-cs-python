@@ -1,3 +1,5 @@
+import json
+
 import requests
 
 tabs = []
@@ -100,4 +102,14 @@ def createNestedTabs():
 def clearAllTabs():
      tabs.clear()
 
+#first we should open the file path and create a json file
+# json.dump is to connect file and jason data
+def saveTabs():
+
+
+    file_path = input("Enter the file path to import tabs: ").strip()
+
+    with open(file_path, 'w') as file:
+             json.dump(tabs,file)
+    print("Tabs are saved successfully")
 
