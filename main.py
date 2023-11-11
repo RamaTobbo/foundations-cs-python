@@ -65,6 +65,7 @@ def displayTabContent(tab):
 # if there is no tabs so we can not open nested tab
 # if there is tabs the user should specify at which tab he want to open a nested tab
 #if the user enter invalid index nothing will be added
+#bigO((1)
 def openNestedTab():
     if len(tabs)==0:
         print("No tabs to create nested tabs.")
@@ -82,6 +83,7 @@ def openNestedTab():
 
 
 # nested tab the user should enter the title and the content
+
 def createNestedTabs():
     nested_tabs = []
     while True:
